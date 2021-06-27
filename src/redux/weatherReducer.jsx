@@ -1,18 +1,18 @@
 const initialState = {
   weatherItems: [],
   loading: false,
-  city: "",
+  city: '',
 };
 
 const weatherReducer = (state = initialState, action) => {
   switch (action.type) {
-    case "weather/load/start":
+    case 'weather/load/start':
       return {
         ...state,
         loading: true,
       };
 
-    case "weather/load/success":
+    case 'weather/load/success':
       return {
         ...state,
         weatherItems: action.payload,
